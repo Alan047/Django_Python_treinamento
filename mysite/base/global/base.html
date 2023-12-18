@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="">
+	<title>Página base</title>
+</head>
+<style>
+	 
+	body,
+	html {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+
+	.task {
+		padding: 1px;
+
+	}
+
+	.menu {
+		list-style: none;
+	}
+
+	.menu span,
+	.menu a {
+		padding: 10px;
+		font-family: Arial, Helvetica, sans-serif;
+		text-decoration: solid;
+		color: #ddd;
+	}
+
+	.Tasks p,
+	.Tasks a,
+	th p a {
+		text-decoration: none;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 20px;
+		padding-left: 30px;
+		margin: auto;
+	}
+
+
+
+	table,
+	th,
+	td {
+		border-collapse: collapse;
+	}
+
+	th,
+	td {
+		padding: 5px 10px;
+		text-align: left;
+	}
+
+	thead th,
+	thead td {
+		text-align: center;
+	}
+
+	table tr:nth-child(odd) {
+		background-color: #ddd;
+
+	}
+
+	.coluna_tasks {
+		width: 100%;
+	}
+
+	thead th {
+		background-color: white;
+	}
+
+	a.task_link {
+		text-decoration: none;
+		color: blue;
+	}
+
+	form input {
+		margin: 10px;
+
+	}
+
+	form {
+		padding: 20px;
+	}
+
+	label {
+		display: block;
+	}
+
+	a.editar {
+		padding: 10px;
+		text-decoration: none;
+		color: green;
+	}
+
+	.finalizar {
+		padding: 10px;
+		text-decoration: none;
+		color: red;
+	}
+
+	.task_p {
+		padding: 25px 10px 10px 40px;
+	}
+
+	.task_p span {
+		text-decoration: solid;
+	}
+
+	#msg {
+		background-color: rgb(39, 219, 78);
+		margin: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.header {
+		background-color: #231f1f;
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+		height: 100px;
+		
+	}
+
+	#logo {
+		margin: 0px;
+		padding-bottom: 35px;
+		color: #ddd;
+		padding-left: 10px;
+		text-shadow: 2px 2px 4px black;
+	}
+
+
+	.menu span {
+		text-align: end;
+		
+
+	}
+
+	.menu span:hover {
+		background-color: rgb(77, 73, 73);
+		border-radius: 5px;
+		transition: 0.10s;
+	}
+
+	.menu span a {
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	}
+
+	.editar, .finalizar {
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	}
+
+	.linha_task a {
+		display: block;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		
+	}
+
+	footer {
+		height: 40px;
+	}
+</style>
+
+<body>
+	<div class="header">
+
+		<h1 id="logo">Site desenvolvido em Django</h1>
+		<li class="menu">
+			<span><a href="/TasksApp">Tarefas</a></span>
+			<span><a href="/TasksApp/add_task">Adicionar</a></span>
+			<span><a href="/TasksApp">Fazendo</a></span>
+			<span><a href="/TasksApp">Finalizadas</a></span>
+		</li>
+
+	</div>
+	
+	{% block texto %} base {% endblock texto %}
+
+<footer >
+
+</footer>
+
+	
+</body>
+
+</html>

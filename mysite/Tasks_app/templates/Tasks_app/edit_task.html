@@ -1,0 +1,17 @@
+{% extends "global/base.html" %}
+
+
+{% block texto %} 
+
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="salvar">
+</form>
+<br>
+<br>
+ <a href="/TasksApp">voltar</a>
+
+
+{% endblock texto %}

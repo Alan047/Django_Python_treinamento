@@ -1,0 +1,31 @@
+{% extends "global/base.html" %}
+
+
+{% block texto %}<form action="#">
+	<h3>login</h3>
+	<label>Usuario</label>
+	<br>
+	<input type="text" name="usuario">
+	<br>
+	<label>Senha</label>
+	<br>
+	<input type="text" name="usuario">
+</form>
+<br>
+<br>
+<a href="/blog">Ir para o blog</a>
+{%for i in dados_polls%}
+<li>
+	<span>{{i.usuario}}</span>
+</li>
+{%endfor%}
+
+<h1>Idicione um usuário:</h1>
+
+<form method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+
+<input type="submit" name="" value="Criar">
+	
+</form>{% endblock texto %}

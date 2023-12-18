@@ -1,0 +1,51 @@
+{% extends "global/base.html" %}
+
+
+{% block texto %}
+{% for msg in messages %}
+
+    <p id="msg">{{msg}}</p>
+
+{% endfor %}
+
+    <h3> Lista de tarefas:</h3>
+    <!-- <div class="Tasks">
+        {% for t in task %}
+            <p class="task"><a href="/TasksApp/task/{{t.id}}">{{t.Task}}</a></p>
+        {% endfor %}
+    </div> -->
+<p>Ação <span>
+    <select name="#" id="#">
+        <option value="#">----------------------------</option>
+        <option value="#">Deletar</option>
+    </select>
+</span></p>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Tarefas:</th>
+            <th colspan="2">Ação:</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for t in task %}
+        
+
+            <tr onclick="location.href='/TasksApp/task/{{t.id}}';" class="linha_task">
+                <th><input type="checkbox" name="" id=""></th>
+                <th class="coluna_tasks"><p class="task"><a class="task_link" href="/TasksApp/task/{{t.id}}">{{t.Task}}</a></p></th>
+                <th><a class="editar" href="/TasksApp/edit_task/{{t.id}}">Editar</a></th>
+                <th><a class="finalizar" href="/TasksApp/delete_task/{{t.id}}">Deletar</a></th>
+                
+                
+            </tr>
+        
+        {% endfor %}
+    </tbody>
+</table>
+    
+{% endblock texto %}
+

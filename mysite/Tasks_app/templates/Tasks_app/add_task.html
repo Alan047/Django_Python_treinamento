@@ -1,0 +1,26 @@
+{% extends "global/base.html" %}
+
+
+{% block texto %} 
+{% if messages %}
+
+    {% for msg in messages %}
+
+    <p id="msg">{{msg}}</p>
+
+    {% endfor %}
+
+{% endif %}
+
+
+<form action="/TasksApp/add_task/" method="post">
+    {% csrf_token %}
+    {{ form_add_task }}
+    <input type="submit" value="Adicionar">
+</form>
+<br>
+<br>
+ <a href="/TasksApp">voltar</a>
+
+
+{% endblock texto %}

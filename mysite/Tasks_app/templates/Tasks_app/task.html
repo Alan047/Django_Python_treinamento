@@ -1,0 +1,16 @@
+{% extends "global/base.html" %}
+
+
+{% block texto %}
+<div class="Task">
+    <h3>{{ dados.TASK}}</h3>
+    <P class="task_p"><span>Descrição:</span> {{dados.DESC}}</P>
+    <p class="task_p">Criação: {{ dados.crated_at}}</p>
+    <br>
+    <br>
+    <br>
+     <a href="/TasksApp">voltar</a>
+
+</div>
+
+{% endblock texto %}
